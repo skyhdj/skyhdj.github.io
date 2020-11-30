@@ -261,7 +261,21 @@
 <p>这时候\blog下就会有这些文件<br>#####到这里安装就结束了<br>通过hexo start 来启动你的博客也可以使用简写 hexo s(鄙人比较懒)</p>
 <p><img src="/img/blogpicture/hexo2.png" alt="this is heox2" title="hexo2:"></p>
 <p>哎嘿！这时候它会给你个地址<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 这里它默认使用的是4000端口(注意一下)</p>
-<p>效果大概是这样的：</p>
+<p><img src="/img/blogpicture/heome.png" alt="this is homepage" title="homepagee:"></p>
+<p>你的可能只是有下面hello world这个页面，我的是安装了主题的（下面会讲别急），<br>继续#####<br>我们来写一篇新的文章 使用hexo n(new的缩写) hexo n “我的第一篇文章”，你可以利用自带的vim 或者vscode来编辑 我用的是:code 我的第一篇文章.md（注意生成的是markdown语法）这里挖个坑以后讲。</p>
+<p>建好之后呢返回到你的\blog文件下从新生成 清理一下文件 hexo clear ——在生成<br>Hexo g生成呢就是看看你刚才操作了啥 给你整理整理，在重启你的服务 hexo s</p>
+<p>劲爆的来了！！！！！<br>通过GitHub来获取免费的公网体验（听懂的掌声），登陆到你的GitHub</p>
+<p><img src="/img/blogpicture/githokme.png" alt="this is gitpage" title="gitpage:"></p>
+<p><img src="/img/blogpicture/crate.png" alt="this is crate" title="crate:"></p>
+<p>这里注意（必须是你的GitHub用户名格式是这样的例：skyhdj.github.io）别问问就是官方要求。</p>
+<p>我们需要把本地的项目部署到GitHub端，这里我们需要一个git 小插件、利用cnpm来安装 cnpm install –save hexo-deployer-git</p>
+<p>在配置本地的__config.yml文件##</p>
+<p><img src="/img/blogpicture/code.png" alt="this is crate" title="crate:"></p>
+<p>找到#deployment 添加 type、repo、branch,repo是你的GitHub仓库地址。</p>
+<p>部署到云端 hexo d部署</p>
+<p>这里需要注意 当出现错误时看一下 这两个文件 git config -global user.name ‘yourname’和<br>git config -global user.email ‘youremail’写上你自己的就可以了。</p>
+<p>最后呢它会提示你输入你的GitHub账号和密码 在刷新你的GitHub就可以了很方便，</p>
+<p>（我们下期再见把拜拜）</p>
 
       
 
