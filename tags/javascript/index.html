@@ -17,25 +17,9 @@
   <meta name="description" content="蓝莲花开遍地，不远千河万里">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="春风十里">
-  <title>install HEXO on github - S M I L E</title>
+  <title>标签 - javascript - S M I L E</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
-
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  
 
 
 
@@ -63,7 +47,7 @@
 
 
 <body>
-  <header style="height: 70vh;">
+  <header style="height: 80vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -162,46 +146,9 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="install HEXO on github">
+            <span class="h2" id="subtitle" title="标签 - javascript">
               
             </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-29 19:16" pubdate>
-        2020年11月29日 晚上
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      775 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      8
-       分钟
-    </span>
-  
-
-  
-  
-</div>
 
             
           </div>
@@ -214,110 +161,40 @@
 
   <main>
     
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="list-group">
+  <p class="h4">共计 1 篇文章</p>
+  <hr>
+  
+  
+    
       
+      <p class="h5">2020</p>
+    
+    <a href="/2020/12/09/javascript%E5%AD%A6%E4%B9%A0%E7%AF%87/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">javascript学习篇</span>
+      <time style="float: right;">12-09</time>
+    </a>
+  
+</div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">install HEXO on github</h1>
-            
-            <div class="markdown-body">
-              <p>1、    什么是HEXO<br>2、    什么是GitHub<br>Hexo是一款用于搭建博客的框架，用户不需要在写自己的代码利用别人写好的来搭建既方便又单，像这样的还有wordpress等等开源框架</p>
-<p>GitHub是一个代码托管平台2019年被以72亿美元收购，拥有给世界大概10亿用户的以及个网站，方便与你的代码或者是你公司代码项目的托管，值得每个程序员学习和使用</p>
-<p>来说说hexo的搭建</p>
-<p>首先我们需要下载安装node.js <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/%EF%BC%88%E5%9B%BD%E5%86%85%E7%9A%84%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9B%B4%E5%BF%AB%E4%B8%80%E7%82%B9%EF%BC%89">https://nodejs.org/zh-cn/（国内的可能会更快一点）</a><br>主要看一下node的版本和npm的版本 node -v    npm -v</p>
-<p>我们主要是用npm来安装的但是呢有个问题就是这个源在国外用起来会比较慢，<br>我推荐使用国内的源、使用npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>(使用淘宝的)</p>
-<p>直接安装：cnpm install -g hexo-cli<br> Hexo -v 验证一下是否安装</p>
-<p>开始搭建博客：<br>在你的本地创建的文件夹，我的是D:\blog<br>通过cmd控制台更方便，进入到blog目录<br>初始化你的博客 hexo init 执行代码后会去GitHub远程克隆文件</p>
-<p><img src="/img/blogpicture/hexo1.png" srcset="/img/loading.gif" alt="this is heox1" title="hexo1:"></p>
-<p>这时候\blog下就会有这些文件<br>#####到这里安装就结束了<br>通过hexo start 来启动你的博客也可以使用简写 hexo s(鄙人比较懒)</p>
-<p><img src="/img/blogpicture/hexo2.png" srcset="/img/loading.gif" alt="this is heox2" title="hexo2:"></p>
-<p>哎嘿！这时候它会给你个地址<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 这里它默认使用的是4000端口(注意一下)</p>
-<p><img src="/img/blogpicture/home.png" srcset="/img/loading.gif" alt="this is homepage" title="homepagee:"></p>
-<p>你的可能只是有下面hello world这个页面，我的是安装了主题的（下面会讲别急），<br>继续#####<br>我们来写一篇新的文章 使用hexo n(new的缩写) hexo n “我的第一篇文章”，你可以利用自带的vim 或者vscode来编辑 我用的是:code 我的第一篇文章.md（注意生成的是markdown语法）这里挖个坑以后讲。</p>
-<p>建好之后呢返回到你的\blog文件下从新生成 清理一下文件 hexo clear ——在生成<br>Hexo g生成呢就是看看你刚才操作了啥 给你整理整理，在重启你的服务 hexo s</p>
-<p>劲爆的来了！！！！！<br>通过GitHub来获取免费的公网体验（听懂的掌声），登陆到你的GitHub</p>
-<p><img src="/img/blogpicture/githome.png" srcset="/img/loading.gif" alt="this is gitpage" title="gitpage:"></p>
-<p><img src="/img/blogpicture/crate.png" srcset="/img/loading.gif" alt="this is crate" title="crate:"></p>
-<p>这里注意（必须是你的GitHub用户名格式是这样的例：skyhdj.github.io）别问问就是官方要求。</p>
-<p>我们需要把本地的项目部署到GitHub端，这里我们需要一个git 小插件、利用cnpm来安装 cnpm install –save hexo-deployer-git</p>
-<p>在配置本地的__config.yml文件##</p>
-<p><img src="/img/blogpicture/code.png" srcset="/img/loading.gif" alt="this is crate" title="crate:"></p>
-<p>找到#deployment 添加 type、repo、branch,repo是你的GitHub仓库地址。</p>
-<p>部署到云端 hexo d部署</p>
-<p>这里需要注意 当出现错误时看一下 这两个文件 git config -global user.name ‘yourname’和<br>git config -global user.email ‘youremail’写上你自己的就可以了。</p>
-<p>最后呢它会提示你输入你的GitHub账号和密码 在刷新你的GitHub就可以了很方便，</p>
-<p>（我们下期再见把拜拜）</p>
 
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/hexo-%E5%AE%89%E8%A3%85/">hexo 安装</a>
-                    
-                  </div>
-                
+
+
+
               </div>
-              
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
-              
-              
-                <div class="post-prevnext row">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/11/29/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E6%9C%9F%E8%AF%BE%E7%A8%8B/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">大一下学期课程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                  </article>
-                </div>
-              
             </div>
-
-            
-          </article>
+          </div>
         </div>
       </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
     
 
     
@@ -400,15 +277,9 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
