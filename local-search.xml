@@ -4,11 +4,36 @@
   
   
   <entry>
+    <title>ffmpeg小技巧</title>
+    <link href="/2020/12/12/ffmpeg%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <url>/2020/12/12/ffmpeg%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    
+    <content type="html"><![CDATA[<p>关于ffmpeg使用的一些命令吧算是，省的每次还得上百度查询又都是广告就自己做一些记录以免后面会用得到</p><h3 id="利用ffmpeg截取一段视频中的片断"><a href="#利用ffmpeg截取一段视频中的片断" class="headerlink" title="利用ffmpeg截取一段视频中的片断"></a>利用ffmpeg截取一段视频中的片断</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -i input.mp<span class="hljs-number">4</span> -vcodec copy -acodec copy -ss <span class="hljs-number">00</span>:<span class="hljs-number">01</span>:<span class="hljs-number">00</span> -to <span class="hljs-number">00</span>:<span class="hljs-number">02</span>:<span class="hljs-number">03</span> output.mp<span class="hljs-number">4</span> -y<br></code></pre></td></tr></table></figure><p>-ss是开始截取时间(set the start time offset)我上文是从1分钟的时候开始截取的；</p><p>-to 是表示截取到哪里 我上文截取到的是2分3秒；也就是说哎从1分钟开始截取到2分3秒结束</p><p>吧上文的to换成t也是可以的；一个意思</p><p>-i呢是指定文件的输入；input.mp4代表着你的源文件视频////////output.mp4呢是你将要输出的视频名称和存放到哪</p><h4 id="vcodec-copy-表示使用跟原视频一样的视频编码解码器"><a href="#vcodec-copy-表示使用跟原视频一样的视频编码解码器" class="headerlink" title="-vcodec copy 表示使用跟原视频一样的视频编码解码器"></a>-vcodec copy 表示使用跟原视频一样的视频编码解码器</h4><h4 id="acodec-copy-表示使用跟原视频一样的音频编码解码器"><a href="#acodec-copy-表示使用跟原视频一样的音频编码解码器" class="headerlink" title="-acodec copy 表示使用跟原视频一样的音频编码解码器"></a>-acodec copy 表示使用跟原视频一样的音频编码解码器</h4><h2 id="值得注意的是-音视频是分开编码解码的"><a href="#值得注意的是-音视频是分开编码解码的" class="headerlink" title="值得注意的是 音视频是分开编码解码的"></a>值得注意的是 音视频是分开编码解码的</h2><h5 id="y则表示如何输出文件已存在则覆盖-这个参数加不加也无所谓"><a href="#y则表示如何输出文件已存在则覆盖-这个参数加不加也无所谓" class="headerlink" title="-y则表示如何输出文件已存在则覆盖 这个参数加不加也无所谓"></a>-y则表示如何输出文件已存在则覆盖 这个参数加不加也无所谓</h5><h2 id="会持续更新"><a href="#会持续更新" class="headerlink" title="会持续更新"></a>会持续更新</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ffmpeg</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>office365安装</title>
     <link href="/2020/12/10/office365%E5%AE%89%E8%A3%85/"/>
     <url>/2020/12/10/office365%E5%AE%89%E8%A3%85/</url>
     
-    <content type="html"><![CDATA[<h2 id="安装正版的office365"><a href="#安装正版的office365" class="headerlink" title="安装正版的office365"></a>安装正版的office365</h2><p>要重新安装office那就必须把原来的给删除干净，不让会出现一些报错现象很麻烦卸载之后记得重启你的电脑。</p><p>卸载不用我说了，打开你的Windows图标里面有个设置按钮长得像齿轮一样的，找到应用在应用列表里搜索你要卸载的软件就可以很简单。</p><h2 id="那我们开始把"><a href="#那我们开始把" class="headerlink" title="那我们开始把"></a>那我们开始把</h2><p>首先呢你会得到一个像这样的账号和密码<br>account:<a href="mailto:&#50;&#x30;&#x38;&#56;&#x33;&#x37;&#x37;&#54;&#64;&#x79;&#x6e;&#x6a;&#x74;&#99;&#46;&#x63;&#111;&#109;">&#50;&#x30;&#x38;&#56;&#x33;&#x37;&#x37;&#54;&#64;&#x79;&#x6e;&#x6a;&#x74;&#99;&#46;&#x63;&#111;&#109;</a><br>password: ynjtc#qwe!161</p><p>这是给你的网址：<a href="https://portal.partner.microsoftonline.cn/">https://portal.partner.microsoftonline.cn</a></p><p>你访问之后呢会来到这个界面<br><img src="/img/microsoftAccount/1.png" alt="01" title="01:"></p><p>哎 这时输入给你的默认密码就行<br><img src="/img/microsoftAccount/2.png" alt="02" title="02:"></p><p>绑定你的手机号和邮箱<br><img src="/img/microsoftAccount/3.png" alt="03" title="03:"></p><p>进入了首页<br><img src="/img/microsoftAccount/4.png" alt="04" title="04:"></p><p>这里我是自己下载的 给我气得很 下了大半天都没下载好，你可以和老师直接拷贝哈<br><img src="/img/microsoftAccount/5.png" alt="05" title="05:"></p><p>嘿嘿就是自己安装了双击下载好的包就可以了</p><p>最后大功告成了我们来登陆账号吧：<br><img src="/img/microsoftAccount/6.png" alt="06" title="06:"></p><p>用你刚才的账号登陆就可以<br><img src="/img/microsoftAccount/7.png" alt="07" title="07:"></p><p><img src="/img/microsoftAccount/8.png" alt="08" title="08:"></p><p><img src="/img/microsoftAccount/9.png" alt="09" title="09:"></p><h4 id="还有好多功能自己尝试把，什么onedrive-onenote-一些云空间啊什么的，主要是在线功能还是很方便的"><a href="#还有好多功能自己尝试把，什么onedrive-onenote-一些云空间啊什么的，主要是在线功能还是很方便的" class="headerlink" title="还有好多功能自己尝试把，什么onedrive onenote 一些云空间啊什么的，主要是在线功能还是很方便的"></a>还有好多功能自己尝试把，什么onedrive onenote 一些云空间啊什么的，主要是在线功能还是很方便的</h4><p>不知道讲清楚了没有~~~~~~ 睡觉了12：10分了 </p>]]></content>
+    <content type="html"><![CDATA[<h2 id="安装正版的office365"><a href="#安装正版的office365" class="headerlink" title="安装正版的office365"></a>安装正版的office365</h2><p>要重新安装office那就必须把原来的给删除干净，不让会出现一些报错现象很麻烦卸载之后记得重启你的电脑。</p><p>卸载不用我说了，打开你的Windows图标里面有个设置按钮长得像齿轮一样的，找到应用在应用列表里搜索你要卸载的软件就可以很简单。</p><h2 id="那我们开始把"><a href="#那我们开始把" class="headerlink" title="那我们开始把"></a>那我们开始把</h2><p>首先呢你会得到一个像这样的账号和密码<br>account:<a href="mailto:&#x32;&#x30;&#56;&#56;&#x33;&#x37;&#55;&#x36;&#x40;&#x79;&#110;&#x6a;&#116;&#99;&#46;&#99;&#x6f;&#x6d;">&#x32;&#x30;&#56;&#56;&#x33;&#x37;&#55;&#x36;&#x40;&#x79;&#110;&#x6a;&#116;&#99;&#46;&#99;&#x6f;&#x6d;</a><br>password: ynjtc#qwe!161</p><p>这是给你的网址：<a href="https://portal.partner.microsoftonline.cn/">https://portal.partner.microsoftonline.cn</a></p><p>你访问之后呢会来到这个界面<br><img src="/img/microsoftAccount/1.png" alt="01" title="01:"></p><p>哎 这时输入给你的默认密码就行<br><img src="/img/microsoftAccount/2.png" alt="02" title="02:"></p><p>绑定你的手机号和邮箱<br><img src="/img/microsoftAccount/3.png" alt="03" title="03:"></p><p>进入了首页<br><img src="/img/microsoftAccount/4.png" alt="04" title="04:"></p><p>这里我是自己下载的 给我气得很 下了大半天都没下载好，你可以和老师直接拷贝哈<br><img src="/img/microsoftAccount/5.png" alt="05" title="05:"></p><p>嘿嘿就是自己安装了双击下载好的包就可以了</p><p>最后大功告成了我们来登陆账号吧：<br><img src="/img/microsoftAccount/6.png" alt="06" title="06:"></p><p>用你刚才的账号登陆就可以<br><img src="/img/microsoftAccount/7.png" alt="07" title="07:"></p><p><img src="/img/microsoftAccount/8.png" alt="08" title="08:"></p><p><img src="/img/microsoftAccount/9.png" alt="09" title="09:"></p><h4 id="还有好多功能自己尝试把，什么onedrive-onenote-一些云空间啊什么的，主要是在线功能还是很方便的"><a href="#还有好多功能自己尝试把，什么onedrive-onenote-一些云空间啊什么的，主要是在线功能还是很方便的" class="headerlink" title="还有好多功能自己尝试把，什么onedrive onenote 一些云空间啊什么的，主要是在线功能还是很方便的"></a>还有好多功能自己尝试把，什么onedrive onenote 一些云空间啊什么的，主要是在线功能还是很方便的</h4><p>不知道讲清楚了没有~~~~~~ 睡觉了12：10分了 </p>]]></content>
     
     
     
@@ -102,7 +127,7 @@
     <link href="/2020/12/05/always-Word-And-Sentence/"/>
     <url>/2020/12/05/always-Word-And-Sentence/</url>
     
-    <content type="html"><![CDATA[<div align=center><h1>记录一下自己看到的英语句子或单词和句子，省的下次又忘了【笑哭.jpg】</h1>    <div>        <img src="/img/englishpic/harddog.gif"/>    </div>    <p>for many years/多年以来</p>    <p>population of world/世界人口</p>    <p>China has a population of 1.4 billion/中国有14亿人口</p>    <p>port n、港口 —————— airport机场 ————————passport护照</p>    <p>possible adj、可能的，有可能的</p>    <p> i believe taht anything is possibe/一切皆有可能</p>    <h3>会一直持续更新！</h3></div>]]></content>
+    <content type="html"><![CDATA[<div align=center><h1>记录一下自己看到的英语句子或单词和句子，省的下次又忘了【笑哭.jpg】</h1>    <div>        <img src="/img/englishpic/harddog.gif"/>    </div>    <p>for many years/多年以来</p>    <p>population of world/世界人口</p>    <p>China has a population of 1.4 billion/中国有14亿人口</p>    <p>port n、港口 —————— airport机场 ————————passport护照</p>    <p>possible adj、可能的，有可能的</p>    <p> i believe taht anything is possibe/一切皆有可能</p>    <hr>    <h3>主谓一致的就近原则</h3>    <p>or;either....or.....(其中的一个);neither.....nor....(两个都不是);not only.....but also;连接并列成分作主语。</p><pre><code>example:                  (主语) （谓语动词）&lt;p&gt;His friends or the boy runs every day&lt;/p&gt;&lt;p&gt;Neither gray nor white is my favorite color&lt;/p&gt;&lt;h3&gt;会一直持续更新！&lt;/h3&gt;</code></pre></div>]]></content>
     
     
     <categories>
