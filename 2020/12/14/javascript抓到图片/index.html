@@ -17,9 +17,25 @@
   <meta name="description" content="蓝莲花开遍地，不远千河万里">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="春风十里">
-  <title>标签 - 教程 - S M I L E</title>
+  <title>javascript抓到图片 - S M I L E</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -146,9 +162,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="标签 - 教程">
+            <span class="h2" id="subtitle" title="javascript抓到图片">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-14 00:18" pubdate>
+        2020年12月14日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      142 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      1
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -161,46 +214,89 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020/12/14/javascript%E6%8A%93%E5%88%B0%E5%9B%BE%E7%89%87/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">javascript抓到图片</span>
-      <time style="float: right;">12-14</time>
-    </a>
-  
-    
-    <a href="/2020/12/13/%E9%80%9A%E8%BF%87vscode%E5%AE%89%E8%A3%85c%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">通过vscode安装c语言编译环境</span>
-      <time style="float: right;">12-13</time>
-    </a>
-  
-</div>
 
-
-
-
-
-              </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">javascript抓到图片</h1>
+            
+            <div class="markdown-body">
+              <h2 id="通过JavaScript代码抓取一些你需要的图片"><a href="#通过JavaScript代码抓取一些你需要的图片" class="headerlink" title="通过JavaScript代码抓取一些你需要的图片"></a>通过JavaScript代码抓取一些你需要的图片</h2><p>首先你要找到你想要图片的<img/>标签<br>再通过变量来存储值/我来演示一下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//声明变量存储值</span><br><span class="hljs-keyword">var</span> img = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;img&#x27;</span>);<br><br><span class="hljs-comment">//再通过for循环来遍历img里面的数组；</span><br><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; img.length; i++)&#123;<br>    <span class="hljs-built_in">console</span>.log(img[i].src);<br>&#125;<br><br>注意这里在浏览器是不能换行的<br><br><span class="hljs-comment">//还有很多功能自己去研究</span><br></code></pre></td></tr></table></figure>
+<p><img src="/img/other/code.png" srcset="/img/loading.gif" alt="picture" title="pic:"></p>
+<p>最后在把你得到的url通过网络来下载，我是用的是freeDownload软件！</p>
+<p><img src="/img/other/downloadpic.png" srcset="/img/loading.gif" alt="picture" title="pic:"></p>
+<h3 id="下期再见"><a href="#下期再见" class="headerlink" title="下期再见"></a>下期再见</h3>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/13/%E9%9A%8F%E7%AC%94/index/">
+                        <span class="hidden-mobile">随笔</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -283,9 +379,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
