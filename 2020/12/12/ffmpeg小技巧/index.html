@@ -14,7 +14,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="蓝莲花开遍地，不远千河万里">
+  <meta name="description" content="一个记录个人成长博客">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="春风十里">
   <title>ffmpeg小技巧 - S M I L E</title>
@@ -55,11 +55,11 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body>
@@ -230,7 +230,6 @@
               <p>关于ffmpeg使用的一些命令吧算是，省的每次还得上百度查询又都是广告就自己做一些记录以免后面会用得到</p>
 
 <h3 id="利用ffmpeg截取一段视频中的片断"><a href="#利用ffmpeg截取一段视频中的片断" class="headerlink" title="利用ffmpeg截取一段视频中的片断"></a>利用ffmpeg截取一段视频中的片断</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -i input.mp<span class="hljs-number">4</span> -vcodec copy -acodec copy -ss <span class="hljs-number">00</span>:<span class="hljs-number">01</span>:<span class="hljs-number">00</span> -to <span class="hljs-number">00</span>:<span class="hljs-number">02</span>:<span class="hljs-number">03</span> output.mp<span class="hljs-number">4</span> -y<br></code></pre></td></tr></table></figure>
-
 <p>-ss是开始截取时间(set the start time offset)我上文是从1分钟的时候开始截取的；</p>
 
 <p>-to 是表示截取到哪里 我上文截取到的是2分3秒；也就是说哎从1分钟开始截取到2分3秒结束</p>
@@ -245,22 +244,17 @@
 <h2 id="带音轨合并多个音频，可指定时间戳，速度慢"><a href="#带音轨合并多个音频，可指定时间戳，速度慢" class="headerlink" title="带音轨合并多个音频，可指定时间戳，速度慢"></a>带音轨合并多个音频，可指定时间戳，速度慢</h2><p>···<br>    ffmpeg -i in.avi -i audio1.wav -i audio2.wav <br>-filter_complex “[1]adelay=30000|30000[aud1];[2]adelay=90000|90000[aud2]; [0][aud1][aud2]amix=3” -c:v copy out.avi<br>···</p>
 <h2 id="生成空白音频"><a href="#生成空白音频" class="headerlink" title="生成空白音频"></a>生成空白音频</h2><p>给视频生成一段空白音轨</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">ffmpeg -<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">video</span><span class="hljs-selector-class">.mp4</span> -f lavfi -<span class="hljs-selector-tag">i</span> anullsrc=channel_layout=stereo:sample_rate=<span class="hljs-number">44100</span> -c:v copy -shortest output.mp4<br></code></pre></td></tr></table></figure>
-
 <p>生成指定时长空白音频</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -f lavfi -i aevalsrc=<span class="hljs-number">0</span> -t &#123;time&#125; -q:a <span class="hljs-number">9</span> -acodec libmp<span class="hljs-number">3</span>lame output.mp<span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache">    <span class="hljs-comment"># 字幕 与 慢速</span><br><span class="hljs-attribute">ffmpeg</span> -i &#123;视频文件&#125; -strict -<span class="hljs-number">2</span> -vf ass=&#123;ass字幕文件&#125; -qscale:v <span class="hljs-number">3</span> &#123;输出文件&#125;<br><br><span class="hljs-attribute">ffmpeg</span> -i &#123;视频文件&#125; -strict -<span class="hljs-number">2</span> -vf subtitles=&#123;srt字幕文件&#125; -qscale:v <span class="hljs-number">3</span> &#123;输出文件&#125;<br><span class="hljs-attribute">ffmpeg</span> -i &#123;视频文件&#125; -filter_complex <span class="hljs-string">&quot;[0:v]setpts=1.6*PTS[v];[0:a]atempo=0.625[a]&quot;</span> -map <span class="hljs-string">&quot;[v]&quot;</span> -map <span class="hljs-string">&quot;[a]&quot;</span> -y &#123;输出文件&#125;<br></code></pre></td></tr></table></figure>
-
 <h2 id="插入字幕"><a href="#插入字幕" class="headerlink" title="插入字幕"></a>插入字幕</h2><p>分为两种方式</p>
 <p>硬字幕<br>即将字幕与视频合并，并且不能再分割出来</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ffmpeg</span> -i <span class="hljs-number">201907181053358357</span>.mp<span class="hljs-number">4</span> -strict -<span class="hljs-number">2</span> -vf \<br><span class="hljs-attribute">subtitles</span>=out.srt:force_style=&#x27;Fontsize=<span class="hljs-number">30</span>\,FontName=FZYBKSJW--GB<span class="hljs-number">1</span>-<span class="hljs-number">0</span>&#x27; -qscale:v <span class="hljs-number">3</span> output.mp<span class="hljs-number">4</span><br><br></code></pre></td></tr></table></figure>
-
 <p>-strict-2表示使用ffmpeg自带得acc编码器<br>force_style=’Fontsize=30,FontName=FZYBKSJW–GB1-0’<br>如果不能被识别，可以将\ 去掉试试</p>
 <h3 id="软字幕"><a href="#软字幕" class="headerlink" title="软字幕"></a>软字幕</h3><p>即内挂字幕，字幕还可以分离出来，插入速度快，但是需要播放器支持</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">ffmpeg -<span class="hljs-selector-tag">i</span> <span class="hljs-number">201907181053358357</span><span class="hljs-selector-class">.mp4</span> -<span class="hljs-selector-tag">i</span> out<span class="hljs-selector-class">.srt</span> -c copy -c:s mov_text output.mp4<br><br></code></pre></td></tr></table></figure>
-
 <h2 id="音频拼接"><a href="#音频拼接" class="headerlink" title="音频拼接"></a>音频拼接</h2><p>无音轨合并，将一段音频与无音轨的视频进行合并，速度快</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">ffmpeg -<span class="hljs-selector-tag">i</span> video2<span class="hljs-selector-class">.avi</span> -<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">audio</span><span class="hljs-selector-class">.mp3</span> -vcodec copy -acodec copy output.avi<br></code></pre></td></tr></table></figure>
-
 <p>**从音视频开始来自:**<a target="_blank" rel="noopener" href="https://panzhenglian.com/2019/07/26/FFmpeg-%E6%8F%92%E5%85%A5%E5%AD%97%E5%B9%95%E5%8F%8A%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E5%B9%B6%E5%91%BD%E4%BB%A4/">https://panzhenglian.com/2019/07/26/FFmpeg-%E6%8F%92%E5%85%A5%E5%AD%97%E5%B9%95%E5%8F%8A%E9%9F%B3%E8%A7%86%E9%A2%91%E5%90%88%E5%B9%B6%E5%91%BD%E4%BB%A4/</a></p>
 <p>这位老哥得博客叫平凡，也是hexo搭建的可以看看他的博客</p>
 <h2 id="会持续更新"><a href="#会持续更新" class="headerlink" title="会持续更新"></a>会持续更新</h2>
@@ -314,6 +308,32 @@
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'http://example.com/2020/12/12/ffmpeg%E5%B0%8F%E6%8A%80%E5%B7%A7/';
+        this.page.identifier = '/2020/12/12/ffmpeg%E5%B0%8F%E6%8A%80%E5%B7%A7/';
+      };
+      Fluid.utils.waitElementVisible('disqus_thread', function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'fluid' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
             
           </article>
         </div>
@@ -469,6 +489,19 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
